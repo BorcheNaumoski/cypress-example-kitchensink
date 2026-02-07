@@ -136,6 +136,45 @@ The scripts `local:run` and `local:open` use the `start-test` alias of the npm m
 
 The `start` script spawns a webserver using the npm module [serve](https://www.npmjs.com/package/serve) and displays the Kitchen Sink App on port `8080`.
 
+### Build and run with Docker
+
+Build the application image using the provided `Dockerfile2`:
+
+```bash
+docker build -f Dockerfile2 -t kitchensink .
+```
+
+Run the container and expose the app on port 8080:
+
+```bash
+docker run --rm -p 8080:8080 kitchensink
+```
+
+Visit `http://localhost:8080` in your browser.
+
+# Running Playwright Tests
+
+After the build is completed, run the following commands:
+
+```bash
+cd playwright-tests
+npx playwright test
+```
+
+# Allure Report Setup
+To enable Allure reporting, install the required dependencies:
+```bash
+npm install -D allure-playwright
+npm install -D allure-commandline
+```
+
+# Generate and Open Allure Report
+After the tests finish running, generate and open the Allure report with:
+```bash
+npx allure generate ./allure-results --clean
+npx allure open
+```
+
 ### Docker testing
 
 If you have Docker installed locally, for instance using [Docker Desktop](https://docs.docker.com/desktop/), you can run the tests from this repo interactively in a Docker container.

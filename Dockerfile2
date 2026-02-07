@@ -1,0 +1,16 @@
+FROM node:20.17.0 AS build
+
+WORKDIR /app
+
+# Install only production deps and skip Git hook setup (husky prepare) during container builds.
+ENV NODE_ENV=production
+ENV CI=1
+ENV NPM_CONFIG_IGNORE_SCRIPTS=true
+
+COPY package*.json ./
+
+RUN npm ci --omit=dev --ignore-scripts
+
+COPY . .
+
+CMD ["npm", "start"]

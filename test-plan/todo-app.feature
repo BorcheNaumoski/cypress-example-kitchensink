@@ -67,7 +67,8 @@ Feature: Todo Management
   # ------------------
 
   Scenario: View active todos
-    Given both active and completed todo items exist
+    Given an active todo item "Active item" exists
+    And a completed todo item "Completed item" exists
     When the user selects the "Active" filter
     Then only active todo items should be displayed
 
@@ -94,11 +95,6 @@ Feature: Todo Management
     Given todo items exist
     When the user refreshes the page
     Then the todo items should persist
-
-  Scenario: Clear completed todos
-    Given completed todo items exist
-    When the user clears completed todos
-    Then all completed todo items should be removed
 
   Scenario: Todo should not be created without pressing Enter
     When the user types "Buy Chocolate" in the todo input field

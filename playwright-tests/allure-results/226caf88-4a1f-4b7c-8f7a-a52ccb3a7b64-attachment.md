@@ -1,0 +1,67 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "cypress.io" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e6]:
+        - list [ref=e7]:
+          - listitem [ref=e8]:
+            - button "Commands" [ref=e9] [cursor=pointer]: Commands
+          - listitem [ref=e11]:
+            - link "Utilities" [ref=e12] [cursor=pointer]:
+              - /url: /utilities
+          - listitem [ref=e13]:
+            - link "Cypress API" [ref=e14] [cursor=pointer]:
+              - /url: /cypress-api
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "GitHub" [ref=e17] [cursor=pointer]:
+              - /url: https://github.com/cypress-io/cypress-example-kitchensink
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - heading "todos" [level=1] [ref=e21]
+        - textbox "What needs to be done?" [ref=e22]
+      - generic [ref=e23]:
+        - checkbox "›Mark all as complete" [ref=e24]
+        - generic [ref=e25]: ›Mark all as complete
+        - list [ref=e26]:
+          - listitem [ref=e27]:
+            - generic [ref=e28]:
+              - checkbox [ref=e29]
+              - generic [ref=e30]: Pay electric bill
+              - text: ×
+          - listitem [ref=e31]:
+            - generic [ref=e32]:
+              - checkbox [ref=e33]
+              - generic [ref=e34]: Walk the dog
+              - text: ×
+          - listitem [ref=e35]:
+            - generic [ref=e36]:
+              - checkbox [active] [ref=e37]
+              - generic [ref=e38]: Change car oil
+              - button "×" [ref=e39] [cursor=pointer]
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - strong [ref=e42]: "3"
+          - text: items left
+        - list [ref=e43]:
+          - listitem [ref=e44]:
+            - link "All" [ref=e45] [cursor=pointer]:
+              - /url: "#/"
+          - listitem [ref=e46]:
+            - link "Active" [ref=e47] [cursor=pointer]:
+              - /url: "#/active"
+          - listitem [ref=e48]:
+            - link "Completed" [ref=e49] [cursor=pointer]:
+              - /url: "#/completed"
+    - generic [ref=e50]:
+      - paragraph [ref=e51]: Double-click to edit a todo
+      - paragraph [ref=e52]:
+        - text: Forked from
+        - link "TodoMVC" [ref=e53] [cursor=pointer]:
+          - /url: http://todomvc.com
+```
